@@ -8,16 +8,16 @@ This is my implementation of the String Calculator kata using Test-Driven Develo
 
 ### Completed Features  
 - [X] Initial Project  
-- [ ] Empty string returns 0  
-- [ ] Single number returns the value  
-- [ ] Two numbers, comma delimited, returns the sum  
-- [ ] Two numbers, newline delimited, returns the sum  
-- [ ] Three numbers delimited either way returns the sum  
-- [ ] Negative numbers throw an exception  
-- [ ] Numbers greater than 1000 are ignored  
-- [ ] Single character delimiter can be defined on the first line  
-- [ ] Multi-character delimiter can be defined on the first line  
-- [ ] Many single or multi-char delimiters can be defined  
+- [X] Empty string returns 0  
+- [X] Single number returns the value  
+- [X] Two numbers, comma delimited, returns the sum  
+- [X] Two numbers, newline delimited, returns the sum  
+- [X] Four numbers delimited either way returns the sum  
+- [X] Negative numbers throw an exception  
+- [X] Numbers greater than 1000 are ignored  
+- [X] Single character delimiter can be defined on the first line  
+- [X] Multi-character delimiter can be defined on the first line  
+- [X] Many single or multi-char delimiters can be defined  
 
 ## Running Tests
 
