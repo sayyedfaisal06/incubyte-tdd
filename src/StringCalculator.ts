@@ -8,6 +8,7 @@ export class StringCalculator {
     const { delimiter, numbersString } =
       this.extractDelimiterAndNumbers(numbers);
     const numberArray = this.parseNumbers(numbersString, delimiter);
+    this.validateNoNegativeNumbers(numberArray);
     return this.calculateSum(numberArray);
   }
 
@@ -33,5 +34,14 @@ export class StringCalculator {
 
   private calculateSum(numbers: number[]): number {
     return numbers.reduce((sum, num) => sum + num, 0);
+  }
+
+  private validateNoNegativeNumbers(numbers: number[]): void {
+    const negativeNumbers = numbers.filter((num) => num < 0);
+    if (negativeNumbers.length > 0) {
+      throw new Error(
+        `negative numbers not allowed ${negativeNumbers.join(",")}`
+      );
+    }
   }
 }
