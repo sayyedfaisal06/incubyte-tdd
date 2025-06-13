@@ -1,7 +1,5 @@
 # String Calculator - TDD Kata
 
-[![Test Status](https://github.com/sayyedfaisal06/incubyte-tdd/actions/workflows/tests.yml/badge.svg)](https://github.com/sayyedfaisal06/incubyte-tdd/actions)
-
 This is my implementation of the String Calculator kata using Test-Driven Development (TDD) in TypeScript.
 
 ## Current Implementation Status
@@ -18,6 +16,26 @@ This is my implementation of the String Calculator kata using Test-Driven Develo
 - [X] Single character delimiter can be defined on the first line  
 - [X] Multi-character delimiter can be defined on the first line  
 - [X] Many single or multi-char delimiters can be defined  
+
+## Screenshots
+
+### Test Output
+![Test Output](./src/screenshots/tests.png)
+
+---
+
+### Test Coverage
+![Test Coverage](./src/screenshots/test-coverage.png)
+
+---
+
+### Code Example
+![Code Sample](./src/screenshots/code.png)
+
+---
+
+### Project Structure
+![Folder Structure](./src/screenshots/folder-structure.png)
 
 ## Running Tests
 
