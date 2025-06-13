@@ -19,8 +19,11 @@ describe("StringCalculator", () => {
     expect(calculator.add("1,2")).toBe(3);
   });
 
-
   test("returns sum for multiple numbers", () => {
     expect(calculator.add("1,2,3,4")).toBe(10);
+  });
+
+  test("handles newlines as delimiter", () => {
+    expect(calculator.add("1\n2,3")).toBe(6);
   });
 });
