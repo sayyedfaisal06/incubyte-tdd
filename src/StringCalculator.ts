@@ -1,13 +1,34 @@
+type Delimiter = string;
+type NumberString = string;
+type ExtractedNumbers = { delimiter: Delimiter; numbersString: NumberString };
 export class StringCalculator {
   add(numbers: string): number {
     if (!numbers) return 0;
-    const numberArray = this.parseNumbers(numbers);
+
+    const { delimiter, numbersString } =
+      this.extractDelimiterAndNumbers(numbers);
+    const numberArray = this.parseNumbers(numbersString, delimiter);
     return this.calculateSum(numberArray);
   }
 
-  private parseNumbers(numbers: string): number[] {
-    const normalizedNumbers = numbers.replace(/\n/g, ',');
-    return normalizedNumbers.split(',').map(num => parseInt(num.trim()));
+  private extractDelimiterAndNumbers(numbers: string): {
+    delimiter: string;
+    numbersString: string;
+  } {
+    if (numbers.startsWith("//")) {
+      const lines = numbers.split("\n");
+      const delimiter = lines[0].substring(2);
+      const numbersString = lines.slice(1).join("");
+      return { delimiter, numbersString };
+    }
+    return { delimiter: ",", numbersString: numbers };
+  }
+
+  private parseNumbers(numbers: string, delimiter: string): number[] {
+    const normalizedNumbers = numbers.replace(/\n/g, delimiter);
+    return normalizedNumbers
+      .split(delimiter)
+      .map((num) => parseInt(num.trim()));
   }
 
   private calculateSum(numbers: number[]): number {
